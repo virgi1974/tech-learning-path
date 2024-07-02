@@ -1,0 +1,27 @@
+El uso de la ventana deslizante nos permite mantener una subcadena actualizada y eficiente a medida que recorremos la cadena original.
+Este método es efectivo para problemas que requieren rastrear un subconjunto de elementos contiguos dentro de una secuencia más grande.
+
+How to Identify Sliding Window Problems:
+
+- These problems generally require Finding Maximum/Minimum Subarray, Substrings which satisfy some specific condition.
+- The size of the subarray or substring ‘K’ will be given in some of the problems.
+- These problems can easily be solved in O(N2) time complexity using nested loops, using sliding window we can solve these in O(n) Time Complexity.
+
+USE CASES
+
+To find the maximum sum of all subarrays of size K
+Smallest subarray with sum greater than a given value
+Find subarray with given sum in an array of non-negative integers
+Smallest window that contains all characters of string itself
+
+
+Buscar submatriz con suma dada
+Máximo de ventana deslizante (máximo de todos los subarreglos de tamaño K)
+Submatriz más larga con suma K
+Encuentre la suma máxima (o mínima) de un subconjunto de tamaño k
+La ventana más pequeña en una cadena que contiene todos los caracteres de otra cadena
+Longitud de la subcadena más larga sin caracteres repetidos
+Primer entero negativo en cada ventana de tamaño k
+Cuente elementos distintos en cada ventana de tamaño k
+La ventana más pequeña que contiene todos los caracteres de la propia cadena.
+Subarreglo de suma más grande con al menos k números
