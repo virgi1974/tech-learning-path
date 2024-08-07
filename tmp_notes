@@ -1,0 +1,65 @@
+#Reversal Algorithm for array rotation
+#Time complexity : O(n), Auxiliary space: O(1)
+
+def reverse(nums, k)
+  size = nums.size
+  return nums if size == 1
+  return nums if k == 0
+
+  init = 0
+  last = -1
+  middle = size / 2
+
+  while init < middle && init < k
+    tmp = nums[init]
+    nums[init] = nums[last]
+    nums[last] = tmp
+
+    init += 1
+    last -= 1
+  end
+
+  nums
+end
+
+# ["a", "b", "c", "d"] -> ["d", "c", "b", "a"]
+
+# 0 "a", -1 "d" -> ["d", "b", "c", "a"]
+# 1 "b", -2 "c" -> ["d", "c", "b", "a"]
+
+# ---------
+
+# ["a", "b", "c", "d", "e"] -> ["e", "d", "c", "b", "a"]
+
+# 0 "a", -1 "e" -> ["e", "b", "c", "d", "a"]
+# 1 "b", -2 "d" -> ["e", "d", "c", "b", "a"]
+# 2 "c", -3 "d" -> ["e", "d", "c", "b", "a"]
+
+# 5 /2 2.5
+
+former array.
+[1,2,3,4,5,6,7]
+final state
+  [7,1,2,3,4,5,6] if k = 1
+  [6,7,1,2,3,4,5] if k = 2
+  [5,6,7,1,2,3,4] if k = 3
+def rotate(nums, k)
+  size = nums.size
+  return nums if size == 1
+  return nums if k == 0
+
+  init = 0
+  last = -1
+  middle = size / 2
+
+  while init < middle && init < k
+    tmp = nums[init]
+    nums[init] = nums[last]
+    nums[last] = tmp
+
+    init += 1
+    last -= 1
+  end
+
+  nums
+end
