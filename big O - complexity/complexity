@@ -1,0 +1,41 @@
+What is Time Complexity?
+  -? Time complexity represents the amount of time an algorithm takes to run
+  as a function of the length of the input
+
+time complexity of O(n)
+  -> means that in the worst case, the algorithm's running time
+  grows linearly with the input size n.
+
+# SIMPLFICATION RULES
+
+## DROP CONSTANT FACTORS
+We usually want to find the "family" of functions that most closely match
+ the growth in computational time
+we usually do not consider constants when analyzing the time complexity.
+  O(2n) is simplified to O(n)
+  O(5n) is simplified to O(n)
+
+## DROP SMALLER TERMS IN A SUM
+  O(n^2 + n) is simplified to O(n^2)
+  O(n^4 + n^2 + n) is simplified to O(n^4 )
+  O(n^4 - n^3) is simplified to O(n^4)
+
+Worse
+↑
+| factorial        O(n!)
+| exponential      O(cⁿ): O(2ⁿ), O(3ⁿ), ...
+| polynomial       O(nᶜ): O(n²), O(n³), ...
+| linear           O(n)
+| logarithmic      O(log(n))
+| constant         O(1)
+↓
+Better
+
+The worst case is the most important case to consider!
+
+### COMBINING RULES examples
+O(4n^2 + n + 5) is simplified to O(n^2)
+O(2^n + n^2) is simplified to O(2^n)
+
+
+sorting ->  O(n log n)

@@ -45,3 +45,11 @@ like a linked list or a deque
 # TALLY METHOD - to count repetitions of elements in an array
   [1,2,3,1].tally
 => {1=>2, 2=>1, 3=>1}
+
+
+[1,2,3,4,5,6].each_slice(2) do |slice|
+  p slice
+end
+# [1,2]
+# [3,4]
+# [5,6]

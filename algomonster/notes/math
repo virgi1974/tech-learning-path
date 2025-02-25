@@ -1,0 +1,41 @@
+MINDSET - OPPORTUNITY
+
+
+
+Permutations and Factorial
+[1,2,3]
+3 elements -> 3! = 3 * 2 * 1 = 6 permutations
+123 132 213 231 312 321
+
+Set {1,2,3} is a subSet of {1,2,3,4}
+
+Arithmetic sequence
+sequence of numbers such that the difference between the consecutive terms is constant.
+1 2 3 4 5
+
+Sum of an arithmetic sequence
+(first_element + last_element) * number_of_elements / 2
+sum([1,2,3,4,5]) = (1 + 5) * 5 / 2 = 15
+
+Geometric sequence
+a sequence of numbers such that the ratio between the consecutive terms is constant.
+1 2 4 8 16 (ratio = 2)
+
+Modular Arithmetic
+function mod(x, y) {
+  while (x >= y) {
+    x -= y
+  }
+  return x
+}
+
+useful for checking if a number is divisible by another number
+e.g. prime numbers
+The general solution to this classical problem is to check if n is divisible by any integers in the range [2, sqrt(n)]
+It works because if a number has more than 2 divisors, it will always have a divisor in the range [2, sqrt(n)].
+
+  Example 1: n = 15
+  We have 15 % 2 = 1 and 15 % 3 = 0. Since 15 % 3 == 0, 15 isn't prime
+
+  Example 2: n = 17
+  We have 17 % 2 = 1, 17 % 3 = 2, and 17 % 4 = 1. Since none of these values evaluated to 0, we can conclude 17 is prime.

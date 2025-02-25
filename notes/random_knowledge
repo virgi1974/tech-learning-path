@@ -1,0 +1,52 @@
+# DB index & Primary Key lookup
+
+B-Tree stands for "Balanced tree"
+it is the DS used by default by Mysql & Postgres to store indexes.
+
+A DB can have different index types
+A DB table can have different index types
+
+Many relational databases use B-trees for indexing by default
+-> searching in a B-tree is log(N), so lookup by primary key in a relational database is log(N)
+
+# Data Structures
+
+- Stack (LIFO)
+  .push
+  .pop
+  .peak
+- Queue (FIFO)
+  . Enqueue
+  . Dequeue
+  . Peek
+- Heap
+  specialized tree-based data structure used to manage a dynamic collection of items where the highest (or lowest) priority element is always at the top.
+
+Ruby does not have stack -> it can be done using an Array
+
+# Amortized analysis
+
+technique used in computer science to analyze the average-case time complexity of algorithms that perform a sequence of operations1.
+It provides a more accurate prediction of an algorithm's performance over multiple operations, rather than focusing on the worst-case complexity of individual operation.
+
+- Example: Dynamic Array (e.g. Pushing and popping elements from a stack)
+  A classic example of amortized analysis is the dynamic array:
+  Adding an element is usually O(1) when there's space available.
+  Occasionally, when the array is full, adding an element requires resizing, which is O(n).
+  The amortized time complexity for adding n elements is O(1) because the cost of occasional resizing is spread out over many add operations
+
+# Ruby scripting
+
+if **FILE** == $0
+
+# Code here runs only when file is executed directly
+
+# Won't run if file is required/imported by another file
+
+end
+
+This is Ruby code that checks if the current file is being run directly (as opposed to being imported/required as a module).
+
+# Casting strings as integers
+
+Integer(s, 10) # converts the string to base-10 integer

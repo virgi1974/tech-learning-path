@@ -1,0 +1,95 @@
+LINKED LIST
+
+- append to end is O(N) ????? it depends whether it implements a tail pointer or not
+- finding an element is O(N)
+
+Big O Complexity for Appending an Element to a Linked List
+
+Singly Linked List (Without Tail Pointer)
+Ruby -> O(n) (No built-in linked list; typically implemented as a custom class without a tail pointer)
+JavaScript -> O(n) (No built-in linked list, typically implemented as a custom class without a tail pointer)
+
+Singly Linked List (With Tail Pointer)
+Custom Implementation in Any Language: O(1) (If the linked list maintains a tail pointer)
+Python (collections.deque) -> O(1) (if using deque, which is a doubly linked list) / O(n) (if implemented as a custom singly linked list)
+Java (LinkedList<E>) -> O(1) (Java's LinkedList maintains a tail pointer)
+C++ (std::list) -> O(1) (C++ std::list is a doubly linked list with a tail pointer)
+
+###################################################################
+
+HASH
+
+- get(key) gets item mapped to key if present -> O(1)
+- put(key, item) sets item mapped to key -> O(1)
+- containsKey(key) boolean of whether or not the key is present -> O(1)
+- remove(key) removes item mapped to key if present -> O(1)
+- size() gets the number of key mappings in the hashmap -> O(1)
+
+!!!!! worst time complexity is actually O(N) due to hash collision and other things.
+but most of the time the assumption of constant time lookup/insert/delete is valid
+
+###################################################################
+
+SET
+
+- contains(item) checks if item is in a set -> O(1)
+- add(item) adds item to a set if it is not already present -> O(1)
+- remove(item) removes item from a set if it is present -> O(1)
+- size() gets the number of items in the set -> O(1)
+
+###################################################################
+
+ARRAY
+
+1. Access (Read by Index) -> O(1)
+2. Append (Push at the End) -> O(1), amortized
+3. Insert (At Arbitrary Index) -> O(n)
+4. Deletion (From Arbitrary Index) -> O(n)
+5. Search (By Value, Unsorted) -> O(n)
+6. Search (By Value, Sorted with Binary Search) -> O(log n)
+
+###################################################################
+
+STACK (LIFO)
+
+push: push(item), amortized -> O(1)
+pop: pop(), amortized -> O(1)
+size: stack.length, -> O(1)
+top: stack[stack.length - 1] -> O(1)
+search: -> O(n)
+
+###################################################################
+
+QUEUE (FIFO)
+
+Enqueue -> O(1)
+Dequeue -> O(1) vs O(n)
+
+Ruby (Array-shift) -> O(n) (Shifting elements) **\***
+Ruby (Queue-pop) -> O(1) @@@@@@@@
+Python (collections.deque.popleft) -> O(1) &&&&&&&&&&&&&&&
+Python (queue.Queue.get) -> O(1) &&&&&&&&&&&&&&&
+Java (LinkedList.removeFirst) -> O(1) &&&&&&&&&&&&&&&
+Java (ArrayDeque.removeFirst) -> O(1) &&&&&&&&&&&&&&&
+C++ (std::queue.pop) -> O(1) &&&&&&&&&&&&&&&
+JavaScript (Array.shift) -> O(n) (Shifting elements) \*\*\*\*
+
+Peak/Front -> O(1)
+Search -> O(n)
+
+**\*** they use dynamic array; when shifting the first element,
+all other elements have to be shifted to the left
+@@@@@@@@ the last element is known so it has constant access time
+&&&&&&&&&&&&&&& Most other languages use linked lists or specialized data structures for queues,
+where removing the first element doesnt require shifting
+
+###################################################################
+
+DEQUEUE
+
+Insert front(or "Push front"): Putting an item in the beginning of the deque.
+Insert back(or "Push back"): Putting an item in the end of the deque.
+Peek front: Look at the first item of the deque.
+Peek back: Look at the last item of the deque.
+Remove front(or "Pop front"): Removing the item at the beginning of the deque.
+Remove back(or "Pop back"): Removing the item at the end of the deque.
