@@ -1,0 +1,26 @@
+Queue - Dequeue as a 2 pointer problem
+  init-pointer -> points to the first element
+  last-pointer -> points to the last element
+
+
+## QUEUE ##
+initialization
+
+- - - - - -
+|
+|->  init-pointer &  last-pointer
+
+we insert a value
+5 - - - - -
+| |-> last-pointer
+|->  init-pointer
+
+we insert a value
+5 2 - - - -
+|   |-> last-pointer
+|->  init-pointer
+
+we remove a value
+5 2 - - - -
+  | |-> last-pointer
+  |->  init-pointer
